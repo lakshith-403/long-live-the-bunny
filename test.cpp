@@ -10,7 +10,7 @@ test program to create a genetic algorithm
 
 using namespace std;
 
-#define DNALENGTH 5
+#define DNALENGTH 8
 #define POOLSIZE 100
 #define MUTATIONPROB 2
 
@@ -52,7 +52,9 @@ gene reproduce(gene a,gene b){
     string dna_b = b.dna;
     string dna = "";
     for(int i=0;i<DNALENGTH;i++)
-        dna += (char)(rand()%100<50?dna_a[i]:dna_b[i]);
+        if(dna_a[i]==target[i])dna += dna_a[i];
+        else if(dna_b[i]==target[i])dna += dna_b[i];
+        else    dna += (char)(rand()%100<50?dna_a[i]:dna_b[i]);
     gene child = gene(dna);
     return child;
 }
