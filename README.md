@@ -1,4 +1,4 @@
-# Projec Meruwa
+# Project Meruwa
  Eco-system simulation
  
  >Objective: Combinining Genetic Algorithms and Supervised Neural Networks to develop an Unsupervised learning model
