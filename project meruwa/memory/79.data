@@ -1,0 +1,41 @@
+topology: 2 4 4
+in: 0 0
+out: 0 0 0 1
+in: 0 -1
+out: 0 0 0 1
+in: 0 -2
+out: 0 0 0 1
+in: 0 -3
+out: 0 0 0 1
+in: 0 -4
+out: 0 0 0 1
+in: 0 -5
+out: 0 0 0 1
+in: 0 -6
+out: 0 0 0 1
+in: 0 -7
+out: 0 0 0 1
+in: 0 -8
+out: 0 0 0 1
+in: 0 -9
+out: 0 0 0 1
+in: 0 -10
+out: 0 0 0 1
+in: 0 -11
+out: 0 0 0 1
+in: 0 -12
+out: 0 0 0 1
+in: 0 -13
+out: 0 0 0 1
+in: 0 -14
+out: 0 0 0 1
+in: 0 -15
+out: 0 0 0 1
+in: 0 -16
+out: 0 0 0 1
+in: 0 -17
+out: 0 0 0 1
+in: 0 -18
+out: 0 0 0 1
+in: 0 -19
+out: 0 0 0 1

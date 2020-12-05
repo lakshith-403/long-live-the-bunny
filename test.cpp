@@ -6,12 +6,13 @@ test program to create a genetic algorithm
 */
 
 
+
 #include <bits/stdc++.h>
 
 using namespace std;
 
 #define DNALENGTH 8
-#define POOLSIZE 100
+#define POOLSIZE 1000
 #define MUTATIONPROB 2
 
 const string target = "lakshith";
@@ -82,9 +83,9 @@ void calculateFitness(){
 void generateNextGeneration(){
     gene nextGen[POOLSIZE];
     for(int i=0;i<POOLSIZE;i++){
-        auto it = survivalMap.lower_bound(rand()%upperBound);
+        auto it = survivalMap.upper_bound(rand()%upperBound);
         int a = (*it).second;
-        it = survivalMap.lower_bound(rand()%upperBound);
+        it = survivalMap.upper_bound(rand()%upperBound);
         int b = (*it).second;
         nextGen[i] = reproduce(genePool[a],genePool[b]);
     }
@@ -111,7 +112,7 @@ int getFitness(string a){
 
 int main(){
     srand(time(0));
-    for(int i=0;i<100000;i++){
+    for(int i=0;i<1000;i++){
         generatePool();
         calculateFitness();
         if(i%100)continue;

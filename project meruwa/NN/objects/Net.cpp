@@ -1,4 +1,4 @@
-#include <Net.h>
+#include "Net.h"
 
 double Net::m_recentAverageSmoothingFactor = 100.0; // Number of training samples to average over
 
@@ -84,6 +84,11 @@ void Net::feedForward(const vector<double> &inputVals)
 		}
 	}
 }
+
+Net::Net(){
+	
+}
+
 Net::Net(const vector<unsigned> &topology)
 {
 	unsigned numLayers = topology.size();
@@ -97,7 +102,7 @@ Net::Net(const vector<unsigned> &topology)
 		// add a bias neuron to the layer:
 		for(unsigned neuronNum = 0; neuronNum <= topology[layerNum]; ++neuronNum){
 			m_layers.back().push_back(Neuron(numOutputs, neuronNum));
-			cout << "Mad a Neuron!" << endl;
+			// cout << "Mad a Neuron!" << endl;
 		}
 
 		// Force the bias node's output value to 1.0. It's the last neuron created above

@@ -1,13 +1,8 @@
 #include <bits/stdc++.h>
-#include <Neuron.h>
+#include "Neuron.h"
 
 using namespace std;
 
-struct Connection
-{
-	double weight;
-	double deltaWeight;
-};
 
 typedef vector<Neuron> Layer;
 
